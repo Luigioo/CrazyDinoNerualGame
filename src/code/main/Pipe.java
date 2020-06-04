@@ -4,19 +4,19 @@ import java.awt.Graphics;
 import java.awt.Color;
 
 public class Pipe {
-    private int width = 20;
-    private int height = 40;
+    public int width = 20;//used for Nerual
+    public int height = 20;//used for Nerual
     
-    private int xpos = 720;
+    public float xpos = 720;//used for Nerual
     private int ypos = 480-height;
 
     public void update(){
-        xpos-=2;
+        xpos-=3;
 
     }
     public void render(Graphics g){
         g.setColor(new Color((float)121/255, (float)117/255, (float)125/255, 0.5f));
-        g.fillRect(xpos, ypos, width, height);
+        g.fillRect((int)xpos, ypos, width, height);
     }
 
     public boolean hit(Bird b){

@@ -10,7 +10,7 @@ public class GameThread extends JPanel implements Runnable{
 	private Input input;
 
     private Thread thread;
-    private float frameCap = 1.0f/120.0f;
+    private float frameCap = 1.0f/30.0f;
     private float SECOND = 1000000000.0f;
 
     public GameThread(AbGame ab){
@@ -81,7 +81,7 @@ public class GameThread extends JPanel implements Runnable{
 					fpsTime = 0;
 					fps = frames;
 					frames = 0;
-					System.out.println(fps);
+					System.out.println("fps: "+fps);
 				}
 			}
 			
